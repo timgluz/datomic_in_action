@@ -1,6 +1,7 @@
 # datomic_in_action
 
-A Clojure library designed to ... well, that part is up to you.
+
+My presentation for CLJ/FIN with getting started examples.
 
 ## Usage
 
@@ -11,3 +12,4 @@ FIXME
 Copyright © 2013 FIXME
 
 Distributed under the Eclipse Public License, the same as Clojure.
+
