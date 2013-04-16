@@ -1,0 +1,18 @@
+[ ;;schema for beer style 
+  {:db/id #db/id[:db.part/db]
+   :db/ident :beer.style/id
+   :db/unique :db.unique/value
+   :db/valueType :db.type/long
+   :db/cardinality :db.cardinality/one
+   :db/index true
+   :db/doc "Unique id for style"
+   :db.install/_attribute :db.part/db}
+
+  {:db/id #db/id[:db.part/db]
+   :db/ident :beer.style/name
+   :db/valueType :db.type/string
+   :db/cardinality :db.cardinality/one
+   :db/fulltext true
+   :db/doc "Name of beer style"
+   :db.install/_attribute :db.part/db} 
+]

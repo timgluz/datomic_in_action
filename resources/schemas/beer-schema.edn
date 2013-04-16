@@ -1,0 +1,74 @@
+[ ;;datomic schema for beer entity
+  {:db/id #db/id[:db.part/db]
+   :db/ident :beer/id
+   :db/unique :db.unique/value
+   :db/valueType :db.type/long
+   :db/cardinality :db.cardinality/one
+   :db/index true
+   :db/doc "Unique id for beer"
+   :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/brewery
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Reference to brewery entity"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/fulltext true
+  :db/doc "Name of beer"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/category
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Category of beer"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/style
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Style of beer"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/abv
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one
+  :db/doc "Strength of beer"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/ibu
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one
+  :db/doc "Bitterness of beer"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/srm
+  :db/valueType :db.type/double
+  :db/cardinality :db.cardinality/one
+  :db/doc "Color of beer"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/upc
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "UPC code"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :beer/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Description of beer"
+  :db.install/_attribute :db.part/db}
+ ]
